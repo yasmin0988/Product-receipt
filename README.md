@@ -1,16 +1,14 @@
 Product Receipt Program
 
-This Python program manages a list of products, stores them in an SQLite database, and displays expired products in a simple GUI using Tkinter.
+A simple Python program that manages products, stores them in an SQLite database, and displays expired products in a GUI using Tkinter.
 
 Features
 
-Stores product information (title, brand, price, expiration date) in SQLite.
+Store product information (title, brand, price, expiration date) in SQLite.
 
-Checks for expired products automatically.
+Automatically check for expired products.
 
-Displays expired products in a Tkinter window.
-
-Uses a clean and simple GUI interface.
+Display expired products in a clean and simple GUI.
 
 Requirements
 
@@ -18,27 +16,26 @@ Python 3.x
 
 Tkinter (usually included with Python)
 
-sqlite3 (built-in with Python)
+SQLite3 (built-in with Python)
 
-Setup and Usage
+Setup
 
-Clone or download the project.
+Clone the repository:
 
-Run the product_table() function to create the database and insert the initial products:
+git clone <your-repo-url>
+cd <your-repo-folder>
 
+
+Create the product database and insert initial products:
+
+from your_script_name import product_table
 product_table()
 
 
-Run the show_expired() function to display expired products in the GUI:
+Display expired products in the GUI:
 
+from your_script_name import show_expired
 show_expired()
-
-
-The Tkinter window will open:
-
-If there are expired products, they will be listed with their title.
-
-If no products are expired, it will show a “No expired products” message.
 
 Database Details
 
@@ -48,23 +45,32 @@ Table: product
 
 Columns:
 
-id (INTEGER PRIMARY KEY AUTOINCREMENT)
+id — INTEGER PRIMARY KEY AUTOINCREMENT
 
-title (TEXT)
+title — TEXT
 
-brand (TEXT)
+brand — TEXT
 
-price (INTEGER)
+price — INTEGER
 
-expiredate (TEXT, stored in YYYY-MM-DD format)
+expiredate — TEXT (YYYY-MM-DD)
 
-Notes
-
-Expiration dates are stored as text in ISO format (YYYY-MM-DD) for compatibility with SQLite date functions.
-
-The GUI is minimal and uses Tkinter’s Label widget with place() for positioning.
+Note: Expiration dates are stored as text in ISO format (YYYY-MM-DD) for compatibility with SQLite’s date functions.
 
 Example Product List
+Title	Brand	Price	Expire Date
+milk	pak	90000	2025-10-01
+pickle	badr	50000	2026-02-10
+ice cream	mihan	30000	2024-10-06
+cheese	roozaneh	60000	2025-11-13
+bread	senan	80000	2025-03-08
+Notes
+
+The GUI is minimal, using Tkinter Label widgets with place() for positioning.
+
+Expired products are shown automatically when the GUI opens.
+
+Python’s datetime is used to check expiration dates.
 Title	Brand	Price	Expire Date
 milk	pak	90000	2025-10-01
 pickle	badr	50000	2026-02-10
