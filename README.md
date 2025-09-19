@@ -1,42 +1,65 @@
-Product Expiry Tracker
-A Python application that tracks product expiry dates with a GUI interface and SQLite database.
+ Product Expiry Tracker
+A Python application that helps you track product expiration dates with a clean GUI interface and SQLite database integration.
 
-Features
-Tracks product information (name, brand, price, expiry date)
+ Features
+Product Management - Store product information (name, brand, price, expiry date)
 
-Identifies expired products
+Smart Expiry Detection - Automatically identifies expired products
 
-SQLite database storage
+Database Storage - Uses SQLite for reliable data persistence
 
-Simple Tkinter GUI
+User-Friendly Interface - Clean Tkinter GUI for easy interaction
 
-Requirements
+ Requirements
 Python 3.x
 
-Tkinter
+Tkinter (included with Python)
 
-SQLite3
+SQLite3 (included with Python)
 
-Usage
-Run the script to:
+🚀 Installation & Usage
+Clone the repository
 
-Create a SQLite database with product table
+bash
+git clone <your-repository-url>
+cd product-expiry-tracker
+Run the application
 
-Populate with sample data
+bash
+python main.py
+🗃️ Database Structure
+The application creates a SQLite database (product.db) with the following table:
 
-Display expired products in a GUI window
+Column	Type	Description
+id	INTEGER	Primary key, auto-incrementing
+title	TEXT	Product name
+brand	TEXT	Brand name
+price	INTEGER	Product price
+expiredate	TEXT	Expiration date (YYYY-MM-DD)
+Sample Data
+The application includes these sample products:
 
-The application checks products against the current date and shows any that have expired.
+Product	Brand	Price	Expiry Date
+Milk	Pak	90000	2025-10-01
+Pickle	Badr	50000	2026-02-10
+Ice cream	Mihan	30000	2024-10-06
+Cheese	Roozaneh	60000	2025-11-13
+Bread	Senan	80000	2025-03-08
+How It Works
+Database Setup - Creates the SQLite database and table structure
 
-Database
-Creates a SQLite database (product.db) with a table containing:
+Data Population - Inserts sample product data
 
-Product name, brand, price, and expiry date
+Expiry Check - Compares product dates against current date
 
-Sample products include milk, pickle, ice cream, cheese, and bread with various expiry dates.
-Title	Brand	Price	Expire Date
-milk	pak	90000	2025-10-01
-pickle	badr	50000	2026-02-10
-ice cream	mihan	30000	2024-10-06
-cheese	roozaneh	60000	2025-11-13
-bread	senan	80000	2025-03-08
+GUI Display - Shows expired products in a clean interface
+
+🔧 Customization
+You can easily modify the product list by editing the product_list variable:
+
+python
+product_list = [
+    {"title": "your_product", "brand": "your_brand", 
+     "price": price, "expiredate": date(year, month, day)},
+    # Add more products as needed
+]
