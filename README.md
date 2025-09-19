@@ -17,7 +17,7 @@ Tkinter (included with Python)
 
 SQLite3 (included with Python)
 
-🚀 Installation & Usage
+Installation & Usage
 Clone the repository
 
 bash
@@ -27,7 +27,7 @@ Run the application
 
 bash
 python main.py
-🗃️ Database Structure
+Database Structure
 The application creates a SQLite database (product.db) with the following table:
 
 Column	Type	Description
@@ -54,7 +54,7 @@ Expiry Check - Compares product dates against current date
 
 GUI Display - Shows expired products in a clean interface
 
-🔧 Customization
+Customization
 You can easily modify the product list by editing the product_list variable:
 
 python
