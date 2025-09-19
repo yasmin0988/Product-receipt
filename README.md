@@ -1,7 +1,7 @@
- Product Expiry Tracker
+*Product Expiry Tracker*
 A Python application that helps you track product expiration dates with a clean GUI interface and SQLite database integration.
 
- Features
+*Features*
 Product Management - Store product information (name, brand, price, expiry date)
 
 Smart Expiry Detection - Automatically identifies expired products
@@ -10,7 +10,7 @@ Database Storage - Uses SQLite for reliable data persistence
 
 User-Friendly Interface - Clean Tkinter GUI for easy interaction
 
- Requirements
+*Requirements*
 Python 3.x
 
 Tkinter (included with Python)
@@ -54,7 +54,7 @@ Expiry Check - Compares product dates against current date
 
 GUI Display - Shows expired products in a clean interface
 
-Customization
+*Customization*
 You can easily modify the product list by editing the product_list variable:
 
 python
